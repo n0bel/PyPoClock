@@ -1,7 +1,7 @@
 # PyPoClock
 PyPoClock is an LED clock along with an information display based on the
 Adafruit PyPortal.
-![PyPiClock Picture](https://raw.githubusercontent.com/n0bel/PyPoClock/master/Pictures/PHOTO_20190412_120627a.jpg)
+![PyPiClock Picture](https://raw.githubusercontent.com/n0bel/PyPoClock/master/Pictures/PHOTO_20190412_120627b.jpg)
 
 The current version supports Date/Time, Current and forecast weather
 information.

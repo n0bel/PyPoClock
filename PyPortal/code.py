@@ -1,5 +1,6 @@
 import time
 import board
+import microcontroller
 import gc
 import json
 import neopixel
@@ -183,12 +184,18 @@ prior_spixel = 0
 while True:
     if (time.monotonic() - last_time) > 3600:
         last_time = time.monotonic()
-        pyportal.get_local_time()
+        try:
+            pyportal.get_local_time()
+        except:
+            microcontroller.reset()
         gc.collect()
 
     if (time.monotonic() - last_weather) > 900 or last_weather == 0:
         last_weather = time.monotonic()
-        value = pyportal.fetch()
+        try:
+            value = pyportal.fetch()
+        except:
+            microcontroller.reset()
         # print("Weather Response", value)
         data = json.loads(value)
         value = None

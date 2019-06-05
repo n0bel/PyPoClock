@@ -165,7 +165,10 @@ pp.append(desc_label)
 
 pixel_around()
 
-pyportal.get_local_time()
+try:
+    pyportal.get_local_time()
+except:
+    microcontroller.reset()
 last_time = time.monotonic()
 
 
